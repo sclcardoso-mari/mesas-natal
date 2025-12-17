@@ -2,13 +2,31 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carta do Futuro – Mesa de Natal 2025</title>
+
   <style>
+    :root {
+      --bg-main: radial-gradient(circle at top, #0b3d2e, #020d08);
+      --card-bg: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      --text-main: #f2f6f4;
+      --accent: #e6c87a;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-main: linear-gradient(180deg, #f4f6f5, #e9eceb);
+        --card-bg: #ffffff;
+        --text-main: #1f2d2a;
+        --accent: #b59b4c;
+      }
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      background: radial-gradient(circle at top, #0b3d2e, #020d08);
-      color: #f2f6f4;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
       line-height: 1.6;
     }
 
@@ -16,15 +34,15 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 40px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      background: var(--card-bg);
       border-radius: 24px;
-      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
       backdrop-filter: blur(6px);
     }
 
     .header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .header h1 {
@@ -41,7 +59,6 @@
     }
 
     .archive {
-      text-align: center;
       font-size: 14px;
       opacity: 0.75;
       margin-top: 12px;
@@ -51,17 +68,17 @@
       height: 2px;
       width: 70%;
       margin: 32px auto;
-      background: linear-gradient(to right, transparent, #e6c87a, transparent);
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
     }
 
     .section {
-      margin-bottom: 36px;
+      margin-bottom: 32px;
     }
 
     .section h3 {
       font-size: 24px;
       margin-bottom: 12px;
-      color: #e6c87a;
+      color: var(--accent);
     }
 
     .section p {
@@ -69,43 +86,69 @@
       margin: 8px 0;
     }
 
-    .intro p {
-      font-size: 18px;
-      text-align: center;
-    }
-
-    .highlight {
-      color: #ffffff;
-      font-weight: 600;
-    }
-
+    .intro p,
     .conclusion {
       text-align: center;
       font-size: 18px;
     }
 
-    .end {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      opacity: 0.7;
-      letter-spacing: 1px;
+    .highlight {
+      font-weight: 600;
     }
 
-    /* Natal futurista */
     .glow {
-      text-shadow: 0 0 8px rgba(230,200,122,0.6);
+      text-shadow: 0 0 6px rgba(230,200,122,0.6);
+    }
+
+    /* Mobile optimisation */
+    @media (max-width: 600px) {
+      .container {
+        margin: 16px;
+        padding: 20px;
+        border-radius: 16px;
+      }
+
+      .header h1 {
+        font-size: 30px;
+        letter-spacing: 1px;
+      }
+
+      .header h2 {
+        font-size: 16px;
+      }
+
+      .section h3 {
+        font-size: 20px;
+      }
+
+      .section p {
+        font-size: 16px;
+        text-align: left;
+      }
+
+      .intro p,
+      .conclusion {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .glow {
+        text-shadow: 0 0 4px rgba(230,200,122,0.5);
+      }
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="container">
 
     <div class="header">
       <h1 class="glow">📜 Carta do Futuro</h1>
       <h2>Ano 2125 · Mesa de Natal 2025</h2>
-      <div class="archive">Arquivo histórico n.º 9F–NATAL–2025<br>Documento encontrado numa antiga escola do século XXI</div>
+      <div class="archive">
+        Arquivo histórico n.º 9F–NATAL–2025<br>
+        Documento encontrado numa antiga escola do século XXI
+      </div>
     </div>
 
     <div class="divider"></div>
@@ -114,13 +157,11 @@
       <p><strong>Caro Júri,</strong></p>
       <p>
         Se está a ler esta carta, significa que acabou de viajar no tempo.<br>
-        Não através de máquinas ou tecnologia avançada, mas por meio de algo muito mais poderoso:<br>
+        Não através de máquinas, mas por meio de algo mais poderoso:<br>
         <span class="highlight">o Natal vivido em 2025</span>.
       </p>
       <p>
-        Os registos históricos mostram que, nesta época, o Natal era construído com gestos simples,
-        criatividade e partilha. 
-		Esta mesa é prova disso!
+        Esta mesa é prova de criatividade, partilha e gestos simples.
       </p>
     </div>
 
@@ -128,49 +169,39 @@
 
     <div class="section">
       <h3>🍞 Tradições Doces do Passado</h3>
-      <p>As <strong>rabanadas</strong> atravessaram gerações e representavam conforto, memória e família reunida à mesa.</p>
-          <p>A <strong>aletria</strong>, delicada e doce, ensinava um valor essencial do Natal antigo: <span class="highlight">paciência</span>. Nada se fazia à pressa.</p>
+      <p>As <strong>rabanadas</strong> representavam conforto e família reunida.</p>
+      <p>A <strong>aletria</strong> ensinava paciência — nada se fazia à pressa.</p>
     </div>
 
     <div class="section">
       <h3>🍪 União em Forma de Bolo</h3>
-      <p>Os <strong>biscoitos e bolos</strong> não eram apenas sobremesas. Eram momentos de trabalho em conjunto, risos na cozinha e mãos sujas de farinha.</p>
-      <p>Cada receita guardava uma história e cada forma era diferente — tal como as pessoas que as preparavam.</p>
+      <p>Bolos e biscoitos eram momentos de união e partilha.</p>
     </div>
 
     <div class="section">
       <h3>🌟 Quando a Tradição Evolui</h3>
-      <p>Os investigadores do futuro ficaram intrigados ao encontrar <strong>árvores de Natal salgadas</strong> e <strong>estrelas recheadas com bolas de pizza</strong>.</p>
-      <p>Estes elementos provam que, em 2025, os jovens respeitavam a tradição, mas também a reinventavam.</p>
-      <p>O Natal não era apenas repetido — <span class="highlight">era recriado</span>.</p>
+      <p>Árvores salgadas e estrelas recheadas mostram criatividade.</p>
+      <p>O Natal era respeitado e reinventado.</p>
     </div>
 
     <div class="section">
       <h3>🍫 O Centro da Mesa</h3>
-      <p>No coração desta mesa encontrava-se uma <strong>fonte de chocolate</strong>.</p>
-      <p>Mais do que um alimento, funcionava como ponto de encontro: todos se aproximavam, escolhiam juntos e partilhavam.</p>
-      <p>Um símbolo claro de união e convivência.</p>
+      <p>A fonte de chocolate era símbolo de convivência.</p>
     </div>
 
     <div class="section">
       <h3>🎄 Criar com as Próprias Mãos</h3>
-      <p>As <strong>decorações feitas manualmente</strong> revelam algo essencial sobre esta época.</p>
-      <p>Nem tudo precisava de ser comprado. Criar significava dedicar tempo, mostrar identidade e dar valor ao que é único.</p>
-      <p>Nenhuma decoração era igual à outra — e isso era exatamente o mais importante.</p>
+      <p>Decorações manuais davam identidade e valor ao tempo dedicado.</p>
     </div>
 
     <div class="divider"></div>
 
     <div class="section conclusion">
       <h3>✨ Conclusão do Registo</h3>
-      <p>Esta mesa de Natal, preparada em 2025, não foi criada apenas para ser observada ou avaliada.</p>
-      <p><span class="highlight">Foi criada para ser vivida.</span></p>
-      <p>Por isso, caro júri, observe com atenção, prove se puder e sinta.</p>
-      <p>Porque, segundo os arquivos do futuro, foi assim que o verdadeiro espírito do Natal conseguiu sobreviver ao tempo.</p>
+      <p><span class="highlight">Esta mesa foi criada para ser vivida.</span></p>
+      <p>É assim que o espírito do Natal sobrevive ao tempo.</p>
     </div>
 
-   
   </div>
-
 </body>
 </html>
